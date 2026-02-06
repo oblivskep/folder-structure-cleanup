@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"],
+    "Videos": [".mp4", ".mov", ".mkv", ".avi", ".webm"],
+    "Audio": [".mp3", ".wav", ".flac", ".m4a", ".aac"],
+    "Docs": [".pdf", ".doc", ".docx", ".txt", ".md", ".rtf"],
+    "Spreadsheets": [".xls", ".xlsx", ".csv"],
+    "Slides": [".ppt", ".pptx"],
+    "Archives": [".zip", ".rar", ".7z", ".tar", ".gz"],
+    "Code": [".py", ".js", ".ts", ".json", ".yaml", ".yml", ".toml", ".ini", ".xml", ".html", ".css"]
+  },
+  "unknown_folder": "Other"
+}
