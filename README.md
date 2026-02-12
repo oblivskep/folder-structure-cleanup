@@ -81,3 +81,8 @@ You can edit `rules.json` to customize folder names and extensions.
 
 - Python 3.8+
 
+---
+
+## License
+
+MIT License. See `LICENSE`.
