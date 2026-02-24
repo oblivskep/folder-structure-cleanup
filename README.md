@@ -45,19 +45,19 @@ pip install -r requirements.txt
 ### Quickstart (dry-run)
 
 ```bash
-python3 organize.py /path/to/source --rules rules.json --output /path/to/output --dry-run --rename
+python3 folder_organizer.py /path/to/source --rules rules.json --output /path/to/output --dry-run --rename
 ```
 
 ### Apply in copy mode
 
 ```bash
-python3 organize.py /path/to/source --rules rules.json --output /path/to/output --rename
+python3 folder_organizer.py /path/to/source --rules rules.json --output /path/to/output --rename
 ```
 
 ### Apply in-place
 
 ```bash
-python3 organize.py /path/to/source --rules rules.json --rename
+python3 folder_organizer.py /path/to/source --rules rules.json --rename
 ```
 
 ## Input
@@ -76,11 +76,11 @@ python3 organize.py /path/to/source --rules rules.json --rename
 
 **Before**
 
-![Before](before.png)
+![Before](example_before.png)
 
 **After**
 
-![After](after.png)
+![After](example_after.png)
 
 ## Use Cases
 
@@ -93,6 +93,7 @@ python3 organize.py /path/to/source --rules rules.json --rename
 - Use copy mode first when you want a safe previewable delivery pipeline.
 - Copy mode requires an empty output folder.
 - Files already inside recognized top-level category folders are skipped.
+- `organize.py` is kept as a compatibility wrapper and calls `folder_organizer.py`.
 
 ## License
 
