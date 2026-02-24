@@ -1,20 +1,10 @@
-# 📁 Folder Cleanup & Structuring (Python)
+# Folder Cleanup and Structuring (Python)
 
-Organize messy folders into a clean structure using configurable rules.
+Turn messy folders into a clean, client-ready file structure.
 
-This tool sorts files into folders (Images, Docs, Archives, Code, etc.) based on file extensions defined in `rules.json`. It supports safe preview mode, copy mode, and in-place organization.
+## Overview
 
----
-
-## ✅ What it does
-
-- Sorts files into categorized folders
-- Uses configurable rules from `rules.json`
-- Handles unknown file types automatically
-- Optional renaming for consistency
-- Supports dry-run before applying changes
-
----
+This service organizes mixed files into consistent category folders (Images, Docs, Archives, Code, etc.) using rules from `rules.json`.
 
 ## Visual Schema
 
@@ -40,58 +30,49 @@ This tool sorts files into folders (Images, Docs, Archives, Code, etc.) based on
 +-----------------------------+
 ```
 
----
+## Requirements
 
-## ▶️ Usage
+- Python 3.9+
 
-### 1) Dry-run (recommended first step)
+## Installation
 
-Preview what would happen without moving files:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Quickstart (dry-run)
 
 ```bash
 python3 organize.py /path/to/source --rules rules.json --output /path/to/output --dry-run --rename
 ```
 
-### 2) Copy mode (safe apply)
-
-Creates organized structure in a new folder, leaving original untouched:
+### Apply in copy mode
 
 ```bash
 python3 organize.py /path/to/source --rules rules.json --output /path/to/output --rename
 ```
 
-### 3) In-place organization
-
-Moves files directly inside the original folder:
+### Apply in-place
 
 ```bash
 python3 organize.py /path/to/source --rules rules.json --rename
 ```
 
----
+## Input
 
-## ⚙️ Rules Configuration
+- Folder to organize (`root`)
+- Rule mapping file (`--rules`, default: `rules.json`)
+- Optional destination folder (`--output`)
+- Optional behavior flags (`--dry-run`, `--rename`)
 
-File categorization is controlled by `rules.json`.
+## Output
 
-Example categories include:
+- Organized category folders in the `--output` folder (copy mode), or in the source folder itself (in-place mode)
+- Run log: `logs/organize_log_<source>_to_<output>_<timestamp>.txt`
 
-- Images
-- Videos
-- Audio
-- Documents
-- Spreadsheets
-- Slides
-- Archives
-- Code
-
-Unknown extensions are placed in the `Other` folder.
-
-You can edit `rules.json` to customize folder names and extensions.
-
----
-
-## 📸 Example
+## Example
 
 **Before**
 
@@ -101,13 +82,17 @@ You can edit `rules.json` to customize folder names and extensions.
 
 ![After](after.png)
 
----
+## Use Cases
 
-## 📋 Requirements
+- Cleaning mixed client/project folders
+- Preparing professional delivery packages
+- Standardizing archives before handoff
 
-- Python 3.8+
+## Notes
 
----
+- Use copy mode first when you want a safe previewable delivery pipeline.
+- Copy mode requires an empty output folder.
+- Files already inside recognized top-level category folders are skipped.
 
 ## License
 
