@@ -16,6 +16,32 @@ This tool sorts files into folders (Images, Docs, Archives, Code, etc.) based on
 
 ---
 
+## Visual Schema
+
+```text
++-----------------------------+
+| Source Folder (Mixed Files) |
++-----------------------------+
+              |
+              v
++-----------------------------+
+| Rule Mapping (rules.json)   |
++-----------------------------+
+              |
+              v
++-----------------------------+
+| Sort + Rename Engine        |
++-----------------------------+
+              |
+              v
++-----------------------------+
+| Organized Output Folders    |
+| Images / Docs / Code / etc. |
++-----------------------------+
+```
+
+---
+
 ## ▶️ Usage
 
 ### 1) Dry-run (recommended first step)
