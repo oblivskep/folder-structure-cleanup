@@ -93,7 +93,6 @@ python3 folder_organizer.py /path/to/source --rules rules.json --rename
 - Use copy mode first when you want a safe previewable delivery pipeline.
 - Copy mode requires an empty output folder.
 - Files already inside recognized top-level category folders are skipped.
-- `organize.py` is kept as a compatibility wrapper and calls `folder_organizer.py`.
 
 ## License
 
